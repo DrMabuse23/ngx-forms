@@ -165,17 +165,17 @@ export class ShareButtonsService {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         return this.http.post(url, body, options)
-            .catch((err) => Observable.empty());
+          // .catch((err) => Observable.empty());
     }
 
     private fetch(url: string) {
         return this.http.get(url)
-            .catch((err) => Observable.empty());
+            // .catch((err) => Observable.empty());
     }
 
     private fetchJsonp(url: string) {
         return this.jsonp.request(`${url}&format=jsonp&callback=JSONP_CALLBACK`)
-            .catch((err) => Observable.empty());
+            // .catch((err) => Observable.empty());
     }
 
     windowAttr() {
