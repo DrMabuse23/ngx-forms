@@ -1,9 +1,4 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  Input,
-  OnInit,
-} from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'ui-nav-custom',
@@ -25,10 +20,5 @@ import {
           style="border: none; width: 113px; height: 28px; line-height: 28px;">
   </iframe>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavCustomComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class NavCustomComponent { }

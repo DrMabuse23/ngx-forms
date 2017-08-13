@@ -3,11 +3,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core'
 @Component({
   selector: 'badges',
   template: `
-    <div class="animated fadeInDownBig">
-      <a *ngFor="let badge of badges" [href]="badge.link">
-        <img [src]="badge.img" />
-      </a>
-    </div>
+    <a *ngFor="let badge of badges" [href]="badge.link">
+      <img [src]="badge.img" />
+    </a>
   `,
   styles: [
     `

@@ -1,38 +1,23 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  Input,
-  OnInit,
-} from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'ui-nav-brand',
   template: `
-    <a class="navbar-brand" href="#">
-      <div class="animated fadeIn">
-        <img class="nav-logo"
-             [src]="logo" /> {{ brand }}
-      </div>
+    <a class="animated fadeIn navbar-brand" routerLink="/">
+      <img class="nav-logo" [src]="logo" /> {{ title }}
     </a>
   `,
-  styles: [
-    `
+  styles: [`
     .nav-logo {
       height: 60px;
     }
-
     .navbar-brand {
       font-size: 24px;
     }
-    `,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  `],
 })
-export class NavBrandComponent implements OnInit {
+export class NavBrandComponent  {
   @Input() logo = 'assets/img/ngx-plus-light.svg'
-  @Input() brand = 'ngx-forms'
+  @Input() title = 'ngx-forms'
 
-  constructor() {}
-
-  ngOnInit() {}
 }

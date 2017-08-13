@@ -12,7 +12,7 @@ import { HeaderComponent } from './header/header.component'
 import { NavComponent } from './nav/nav.component'
 import { NavBrandComponent } from './nav/nav-brand.component'
 import { NavCustomComponent } from './nav/nav-custom.component'
-import { NavNavComponent } from './nav/nav-nav.component'
+import { NavItemsComponent } from './nav/nav-items.component'
 import { CardComponent } from './card/card.component'
 import { LayoutComponent } from './layout/layout.component'
 
@@ -22,7 +22,7 @@ const ui = [
   NavComponent,
   NavBrandComponent,
   NavCustomComponent,
-  NavNavComponent,
+  NavItemsComponent,
   BadgesComponent,
   RibbonComponent,
   HighlightComponent,
@@ -36,7 +36,6 @@ const ui = [
   imports: [CommonModule, RouterModule],
   declarations: [...ui],
   exports: [
-    // CommonModule,
     ...ui,
   ],
 })

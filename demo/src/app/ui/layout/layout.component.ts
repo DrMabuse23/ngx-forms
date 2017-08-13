@@ -4,14 +4,12 @@ import { ActivatedRoute } from '@angular/router'
 @Component({
   selector: 'ui-layout',
   template: `
-    <div class="animated fadeIn container-fluid">
-      <ui-nav [items]="items"></ui-nav>
-      <ui-header></ui-header>
-      <div class="animated slideInUp container">
-        <router-outlet></router-outlet>
-      </div>
-      <ui-footer></ui-footer>
+    <ui-nav [items]="items"></ui-nav>
+    <ui-header></ui-header>
+    <div class="container">
+      <router-outlet></router-outlet>
     </div>
+    <ui-footer></ui-footer>
   `,
 })
 export class LayoutComponent implements OnInit {
